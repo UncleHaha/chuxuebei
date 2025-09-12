@@ -44,7 +44,7 @@
     button {
       font-size: 1em; margin: 0 10px; padding: 10px 20px;
       border: none; border-radius: 10px; font-weight: bold;
-      background-color: #ffffff; color: #285c34; box-shadow: 0 2px 8px rgba(0,0,0,0.3); cursor: pointer;
+      background-color: #ffffff; color: #df9a23; box-shadow: 0 2px 8px rgba(0,0,0,0.3); cursor: pointer;
     }
     button:hover { background-color: #f0f0f0; }
   </style>
@@ -72,34 +72,23 @@
 
   <audio id="alert-sound"></audio>
   <audio id="jazz-player" loop>
-    <source src="assets/sounds/classical.mp3" type="audio/mpeg" />
+    <source src="assets/sounds/jazz2.mp3" type="audio/mpeg" />
   </audio>
 
   <script>
     const SCENES = [
-      { name: "赛前准备", time: 1, background: "assets/images/1.jpg", alerts: [] },
-      { name: "开始", time: 1, background: "assets/images/2.jpg", alerts: [] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "申论", time: 180, background: "assets/images/24.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "对辩", type: "duibian", background: "assets/images/25.jpg", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "中休", time: 120, background: "assets/images/32.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "总结", time: 180, background: "assets/images/33.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "总结", time: 180, background: "assets/images/34.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "队伍缓冲", type: "duibian", background: "assets/images/35.jpg", sides: [ {label: "正方", time: 300}, {label: "反方", time: 300} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "评审缓冲", time: 1, background: "assets/images/36.jpg", alerts: [] },
-      { name: "点评", time: 210, background: "assets/images/37.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "点评", time: 600, background: "assets/images/37.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "补充", time: 210, background: "assets/images/38.jpg", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
-      { name: "赛果公布", time: 1, background: "assets/images/39.jpg", alerts: [] }
+      { name: "赛前准备", time: 1, background: "assets/images/14.png", alerts: [] },
+      { name: "开始", time: 1, background: "assets/images/15.png", alerts: [] },
+      { name: "申论", time: 180, background: "assets/images/19.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "对辩", type: "duibian", background: "assets/images/20.png", sides: [ {label: "正方", time: 10}, {label: "反方", time: 15} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "中休", time: 120, background: "assets/images/21.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "总结", time: 180, background: "assets/images/22.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "队伍缓冲", type: "duibian", background: "assets/images/23.png", sides: [ {label: "正方", time: 300}, {label: "反方", time: 300} ], alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "评审缓冲", time: 1, background: "assets/images/24.png", alerts: [] },
+      { name: "点评", time: 420, background: "assets/images/25.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "点评", time: 600, background: "assets/images/25.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "补充", time: 120, background: "assets/images/26.png", alerts: [{time: 30, sound: "assets/sounds/30s.mp3"}, {time: 0, sound: "assets/sounds/Dindin.mp3"}] },
+      { name: "赛果公布", time: 1, background: "assets/images/27.png", alerts: [] }
     ];
 
     let currentIndex = 0;
